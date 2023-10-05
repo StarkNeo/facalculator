@@ -1,0 +1,25 @@
+{
+  "name": "facalculator",
+  "version": "1.0.0",
+  "description": "with native binding sql",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StarkNeo/facalculator.git"
+  },
+  "keywords": [
+    "fix",
+    "assets",
+    "calculator",
+    "inpc"
+  ],
+  "author": "Jesus Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StarkNeo/facalculator/issues"
+  },
+  "homepage": "https://github.com/StarkNeo/facalculator#readme"
+}
