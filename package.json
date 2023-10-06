@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "with native binding sql",
   "main": "app.js",
+  "engines": {"node": "^18.15.0"},
   "scripts": {
     "dev": "nodemon app.js",
     "start":"node app.js"
