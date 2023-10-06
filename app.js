@@ -1,0 +1,23 @@
+const express = require('express');
+const app = express();
+const cors = require('cors');
+const crud = require('./crud');
+
+
+app.use(cors());
+app.use(express.json());
+
+app.listen(3000,()=>{
+    console.log("Server online");
+})
+
+
+app.post('/getInpc', async (req, res) => {
+    try {
+        let response = await crud.consulta(req.body.month, req.body.year);
+        res.status(200).send({ message: "inpc recibido", data: response })
+    } catch (error) {
+        res.status(400).send({message:"Indice", data: 1})
+    }
+
+})
