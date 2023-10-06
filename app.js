@@ -2,13 +2,16 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const crud = require('./crud');
+const {config}= require('dotenv');
 
+config()
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
 
-app.listen(3000,()=>{
-    console.log("Server online");
+app.listen(port,()=>{
+    console.log(`Server online on port:${port}`);
 })
 
 
