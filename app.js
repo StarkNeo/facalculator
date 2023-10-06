@@ -14,6 +14,9 @@ app.listen(port,()=>{
     console.log(`Server online on port:${port}`);
 })
 
+app.get('/jelou', async (req,res)=>{
+    res.send({message:"jelou"});
+})
 
 app.post('/getInpc', async (req, res) => {
     try {
