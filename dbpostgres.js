@@ -3,12 +3,12 @@ const dotenv = require('dotenv').config();
 
 const db = {
     dialect: 'postgres',
-    user: dotenv.parsed.USER,
-    pass: dotenv.parsed.PASS,
-    port: dotenv.parsed.PORT,
-    database: dotenv.parsed.DB
+    user: process.env.USER,
+    pass: process.env.PASS,
+    port: process.env.PORT,
+    database: process.env.DB
 }
-const mySequelize = new Sequelize(`${db.dialect}://${db.user}:${db.pass}@${db.port}/${db.database}`)
+const mySequelize = new Sequelize(`${db.dialect}://${db.user}:${db.pass}@localhost:${db.port}/${db.database}`)
 
 try {
     mySequelize.authenticate();
